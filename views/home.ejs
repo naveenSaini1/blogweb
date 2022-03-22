@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+    <h1>Naveen's blogs</h1>
+   <a href="/new" class="btn btn-success ml-4">Create New Blog</a>
+   <%data.reverse()%>
+    <%data.forEach((e)=>{%>
+    
+    <div class="card  " style="width: 70%;margin-top: 1rem !important; margin: auto; ">
+        <div class="card-body">
+          <h5 class="card-title"><%= e.title%></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= e.date%></h6>
+          <p class="card-text"><%= e.content.slice(0,200)%>....</p>
+          <a href='/read-more/<%=e._id %>' class="card-link btn btn-primary"  >Read More</a>
+          <a href='/edit/<%=e._id %>' class="card-link btn btn-warning">Edit</a>
+          <a href='/delete/<%=e._id %>' class="card-link btn btn-danger">delete</a>
+        </div>
+
+    </div>
+    <%})%>
+<%- include('footer'); -%>

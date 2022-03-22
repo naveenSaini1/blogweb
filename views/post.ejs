@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+
+<form action="/new" method="POST" class="form-group" style="display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;">
+
+   <input type="text" name="title" id="" placeholder="enter the title" required  style="
+   margin-top: 22px; width: 48%;
+    padding: 9px 14px;" class="p-10">
+   <br>
+   <textarea name="content" id="" cols="30" rows="10" style="margin: auto;
+   margin-top: 10px; width:40%" class="form-control" required minlength=100></textarea>
+   <div>
+   <input type="submit" value="submit" class="btn btn-primary m-4">
+   <a href="/" class="card-link btn btn-danger">cancel</a>
+</div>
+</form>
+
+<%- include('footer'); -%>
